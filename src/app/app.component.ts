@@ -39,43 +39,43 @@ export class AppComponent implements AfterViewInit {
             description: "George brings projector for presentations.",
             location: "",
             subject: "Quarterly Project Review Meeting",
-            calendar: "Room 1",
-            start: new Date(2018, 10, 23, 9, 0, 0),
-            end: new Date(2018, 10, 23, 16, 0, 0)
+            calendar: "A-B1F",
+            start: new Date(2019, 8, 20, 10, 0, 0), //(y,m,d,t)
+            end: new Date(2019, 8, 20, 13, 0, 0)
         };
         let appointment2 = {
             id: "id2",
             description: "",
             location: "",
-            subject: "IT Group Mtg.",
-            calendar: "Room 2",
-            start: new Date(2018, 10, 24, 10, 0, 0),
-            end: new Date(2018, 10, 24, 15, 0, 0)
+            subject: "PPS Group Mtg.",
+            calendar: "C-B2F ",
+            start: new Date(2019, 9, 24, 10, 0, 0),
+            end: new Date(2019, 9, 24, 11, 0, 0)
         };
         let appointment3 = {
             id: "id3",
             description: "",
             location: "",
-            subject: "Course Social Media",
-            calendar: "Room 3",
-            start: new Date(2018, 10, 27, 11, 0, 0),
-            end: new Date(2018, 10, 27, 13, 0, 0)
+            subject: "HR Meeting",
+            calendar: "A-B2F",
+            start: new Date(2019, 10, 27, 11, 0, 0),
+            end: new Date(2019, 10, 27, 13, 0, 0)
         };
         let appointment4 = {
             id: "id4",
             description: "",
             location: "",
             subject: "New Projects Planning",
-            calendar: "Room 2",
-            start: new Date(2018, 10, 23, 16, 0, 0),
-            end: new Date(2018, 10, 23, 18, 0, 0)
+            calendar: "C-B1F",
+            start: new Date(2019, 10, 23, 16, 0, 0),
+            end: new Date(2019, 10, 23, 18, 0, 0)
         };
         let appointment5 = {
             id: "id5",
             description: "",
             location: "",
             subject: "Interview with James",
-            calendar: "Room 1",
+            calendar: "W-R1",
             start: new Date(2018, 10, 25, 15, 0, 0),
             end: new Date(2018, 10, 25, 17, 0, 0)
         };
@@ -84,9 +84,9 @@ export class AppComponent implements AfterViewInit {
             description: "",
             location: "",
             subject: "Interview with Nancy",
-            calendar: "Room 4",
-            start: new Date(2018, 10, 26, 14, 0, 0),
-            end: new Date(2018, 10, 26, 16, 0, 0)
+            calendar: "W-R2",
+            start: new Date(2019, 10, 26, 14, 0, 0),
+            end: new Date(2019, 10, 26, 16, 0, 0)
         };
         appointments.push(appointment1);
         appointments.push(appointment2);
