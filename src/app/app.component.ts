@@ -112,7 +112,7 @@ export class AppComponent implements AfterViewInit {
         localData: this.generateAppointments()
     };
     dataAdapter: any = new jqx.dataAdapter(this.source);
-    date: any = new jqx.date(2018, 11, 23);
+    date: any = new jqx.date(2019, 8, 1);
     
     appointmentDataFields: any =
     {
