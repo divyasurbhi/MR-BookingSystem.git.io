@@ -1,0 +1,40 @@
+<div class="login px-sm-4 mx-auto mw-100">
+    <h5 class="text-centeactior mb-4">Login to MR-BookingSystem</h5>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit(email,pwd)" >
+        <div class="row">
+            <div class="col-md-6">
+          <label>
+              Your Email Id:
+            </label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="formControl" formControlName="email" required>
+              <div *ngIf=" (email?.dirty || email?.touched) && email.errors?.required" class="alert alert-danger">
+                  Email is required.
+               </div>
+               <div *ngIf="email?.invalid && (email.errors?.pattern||email.errors?.email)" class="alert alert-danger">
+                This email address is not valid.
+             </div>
+            </div>
+            </div>
+          
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+               <label>Create Password: </label></div>
+               <div class="col-md-6">
+               <input  type="password" class="formControl"  formControlName="pwd" required>
+               <div  class="alert alert-danger" *ngIf="pwd?.touched && pwd.errors.minlength && !pwd.errors.required">Password must be at least 6 characters</div> 
+               <div class="alert alert-danger" 
+                 *ngIf="pwd?.invalid && (pwd?.dirty || pwd?.touched)">
+                Password is required.
+            </div>
+            
+               </div>
+              </div>
+        <button type="submit" class="btn btn-primary submit mt-2" >Login</button>
+        <p class="text-center mt-2">
+            <a href="#register"> Don't have an account?</a>
+        </p>
+    </form>
+</div>

@@ -1,0 +1,40 @@
+
+
+
+        <section class="process py-5" id="list">
+            <div class="container py-md-3">
+                <h2>Schedule your Meetings</h2>
+        <jqxScheduler #schedulerReference (onAppointmentClick)="AppointmentClick($event)"
+              (onAppointmentDelete)="AppointmentDelete($event)"
+              (onAppointmentAdd)="AppointmentAdd($event)"
+            [renderAppointment]="renderAppointment"
+              [theme]="'energyblue'"
+              [showLegend]="true"
+              [contextMenuCreate]="contextMenuCreate"
+              [contextMenuItemClick]="contextMenuItemClick"
+              [contextMenuOpen]="contextMenuOpen"
+              [editDialogCreate]="editDialogCreate"
+              [dayNameFormat]="'abbr'"
+              [editDialogOpen]="editDialogOpen"
+              [legendPosition]='top'
+              [date]="date" [width]="800" [height]="600" [columnsHeight]="40" [source]="dataAdapter" [showLegend]="true" [view]="'weekView'"
+              [appointmentDataFields]="appointmentDataFields" [appointmentTooltips]="True" [resources]="resources" [views]="views">
+</jqxScheduler>
+<jqxButton #htmlButton [width]='120' [height]='40' (onClick)="hTMLButtonClicked()">
+    
+        <span style='font-weight: bold;'>Back</span>
+    </jqxButton>
+<div id="scheduler"></div>
+</div>
+
+</section>
+<!-- css files -->
+<link href=",./../../../assets/css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+<link href=",./../../../assets/css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+<link href=",./../../../assets/css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+<!-- //css files -->
+<link rel="stylesheet" href="https://www.jqwidgets.com/public/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <link rel="stylesheet" href="https://www.jqwidgets.com/public/jqwidgets/styles/jqx.energyblue.css" type="text/css" />
+        <script type="text/javascript" src="https://www.jqwidgets.com/public/jqwidgets/jqx-all.js"></script>
+        <script type="text/javascript" src="https://www.jqwidgets.com/public/jqwidgets/globalization/globalize.js"></script>
+  

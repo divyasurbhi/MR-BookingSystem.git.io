@@ -1,0 +1,120 @@
+<h3>Register yourself</h3>
+<form  [formGroup]="registerForm" (ngSubmit)="onSubmit(email,pwd)">
+ 
+    <div class="row">
+  <div class="col-md-6">
+  <label>
+  Your Name: </label>
+  </div>
+  <div class="col-md-6">
+    <input type="text" class="formControl" formControlName="name"  required>
+    <div *ngIf="name?.invalid && (name?.dirty || name?.touched) && name.errors?.required" class="alert alert-danger">
+        Name is required.
+     </div>
+  </div>
+</div>
+
+ <br>
+ 
+ 
+ <div class="row">
+  <div class="col-md-6">
+<label>
+    Your Email Id:
+  </label>
+  </div>
+  <div class="col-md-6">
+    <input type="text" class="formControl" formControlName="email" required>
+    <div *ngIf=" (email?.dirty || email?.touched) && email.errors?.required" class="alert alert-danger">
+        Email is required.
+     </div>
+     <div *ngIf="email?.invalid && (email.errors?.pattern||email.errors?.email)" class="alert alert-danger">
+      This email address is not valid.
+   </div>
+  </div>
+  </div>
+
+  <br>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+  <label>
+    Role:</label>
+    </div>
+    <div class="col-md-6">
+            <select name="role"  class="formControl" formControlName="role" required>
+                    <option value=""></option>
+                    <option value="admin">Admin</option>
+                    <option value="member">Member</option>
+                    
+                </select>
+              </div>
+    <div class="alert alert-danger" 
+     *ngIf="role?.invalid && (role?.dirty || role?.touched) && role.errors?.required">
+    Please choose your role.
+</div>
+   </div>
+  
+  
+  <br>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+  <label>
+    Designation:</label>
+    </div>
+    <div class="col-md-6">
+    <input type="text"class="formControl" name="desig" formControlName="desig" required>
+    <div class="alert alert-danger" 
+     *ngIf="desig?.invalid && (desig?.dirty || desig?.touched) && desig.errors?.required">
+     Your designation name is required
+</div>
+  </div>
+  </div>
+ 
+  <br>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+   <label>Create Password: </label></div>
+   <div class="col-md-6">
+   <input  type="password" class="formControl"  formControlName="pwd" required>
+   
+   <div class="alert alert-danger" 
+     *ngIf="(pwd?.dirty || pwd?.touched)&& pwd.errors?.required">
+   Creating Password is mandatory.
+</div>
+<div class="alert alert-danger" 
+     *ngIf="email?.invalid && pwd.errors?.minlength">
+     
+Minimum length required is 6.
+</div>
+
+   </div>
+  </div>
+ 
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+   <label>Confirm Password: </label></div>
+   <div class="col-md-6">
+   <input  type="password" class="formControl"  formControlName="confirmpwd" required>
+   <div class="alert alert-danger" 
+     *ngIf="confirmpwd?.invalid && (confirmpwd?.dirty || confirmpwd?.touched)">
+    Please confirm your password
+</div>
+<div class="alert alert-danger" 
+*ngIf="confirmpwd?.touched && confirmpwd.errors?.mustMatch && !confirmpwd.errors.required">
+    Does not match with the created password.
+</div>
+   </div>
+  </div>
+ 
+  <br>
+
+  <button type="submit" style="margin:20px;" >Submit</button>
+</form>
+
