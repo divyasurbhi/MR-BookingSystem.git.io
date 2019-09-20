@@ -1,5 +1,28 @@
+<<<<<<< HEAD
 
 
 
 <router-outlet></router-outlet>
 
+=======
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://www.jqwidgets.com/public/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <link rel="stylesheet" href="https://www.jqwidgets.com/public/jqwidgets/styles/jqx.energyblue.css" type="text/css" />
+        <script type="text/javascript" src="https://www.jqwidgets.com/public/jqwidgets/jqx-all.js"></script>
+        <script type="text/javascript" src="https://www.jqwidgets.com/public/jqwidgets/globalization/globalize.js"></script>
+
+
+
+
+        <jqxScheduler #schedulerReference (onAppointmentClick)="AppointmentClick($event)"
+              (onAppointmentDelete)="AppointmentDelete($event)"
+              (onAppointmentAdd)="AppointmentAdd($event)"
+              [theme]="'energyblue'"
+              [contextMenu]="true"
+              [dayNameFormat]="'abbr'"
+              [editDialogOpen]="editDialogOpen"
+              [legendPosition]='top'
+              [date]="date" [width]="800" [height]="600" [columnsHeight]="40" [source]="dataAdapter" [showLegend]="true" [view]="'weekView'"
+              [appointmentDataFields]="appointmentDataFields" [appointmentTooltips]="True" [resources]="resources" [views]="views">
+</jqxScheduler>
+>>>>>>> e09160f1b364ce322a40c42d18e1367f6a455936

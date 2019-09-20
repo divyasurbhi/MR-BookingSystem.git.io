@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+<<<<<<< HEAD
 import { AppRoutingModule, routes } from './app.routing';
 import { RouterModule, RouteReuseStrategy } from '@angular/router';
 import * as firebase from 'firebase';
@@ -43,10 +44,20 @@ firebase.initializeApp(firebaseConfig);
     RoomsComponent,
     
     
+=======
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { jqxSchedulerModule } from '../../node_modules/jqwidgets-ng/jqxscheduler';
+
+@NgModule({
+  declarations: [
+    AppComponent
+>>>>>>> e09160f1b364ce322a40c42d18e1367f6a455936
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     RouterModule.forRoot(routes),
     jqxSchedulerModule,jqxButtonModule,
     FormsModule,ReactiveFormsModule,
@@ -67,3 +78,11 @@ export class AppModule {
   console.log(fireBaseUser);
   }
 }
+=======
+    jqxSchedulerModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+>>>>>>> e09160f1b364ce322a40c42d18e1367f6a455936

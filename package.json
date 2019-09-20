@@ -19,10 +19,13 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+<<<<<<< HEAD
     "@syncfusion/ej2-angular-schedule": "^17.2.49",
     "angularfire2": "^5.2.1",
     "bootstrap": "^4.3.1",
     "firebase": "^6.6.0",
+=======
+>>>>>>> e09160f1b364ce322a40c42d18e1367f6a455936
     "jqwidgets-ng": "^8.1.4",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
